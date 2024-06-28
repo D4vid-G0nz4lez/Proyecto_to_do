@@ -1,0 +1,8 @@
+{% block content %}
+<h2>Delete task</h2>
+<p>¿Estás seguro de que quieres eliminar la tarea "{{ task.title }}"?</p>
+<form method="post">
+  {% csrf_token %}
+  <button type="submit">Confirmar eliminación</button>
+</form>
+{% endblock %}
